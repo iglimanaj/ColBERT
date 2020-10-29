@@ -14,7 +14,7 @@ class ColBERT(BertPreTrainedModel):
         self.doc_maxlen = doc_maxlen
         self.similarity_metric = similarity_metric
 
-        self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+        self.tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-uncased')
         self.skiplist = {w: True for w in string.punctuation}
 
         self.bert = BertModel(config)
